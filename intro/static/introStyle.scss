@@ -1,0 +1,145 @@
+@import "reset";
+
+$maind-red:#e50a15;
+$dark-red:#dc060f;
+$logo-dark-red:#b20710;
+$white:#ffffff;
+$gray:#303030;
+$light-gray:#3c3c3c;
+$black: #000000;
+$black2: #121212;
+
+body {
+  overflow: hidden;
+}
+
+.introlayout {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  
+  //로고 제작
+  .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 260px;
+    height: 470px;
+    transform: scale(0.5);
+    margin: auto;
+    overflow: hidden;
+    // background-color: $light-gray;
+    // animation: introScaleUp 3s 1.5s both ease-in;
+    // transform-origin: center;
+    
+    .lineEffect {
+      position: absolute;
+      background-color: gray;
+      width: 1px;
+      height: 472px;
+      clip-path: polygon(50% 0, 100% 0, 100% 35%, 100% 70%, 100% 98%, 52% 99%, 0 100%, 0% 70%, 0% 35%, 0 0);
+      // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .intro1 {
+      position: absolute;
+      background-color: $logo-dark-red;
+      width: 86.5px;
+      height: 472px;
+      clip-path: polygon(50% 0, 100% 0, 100% 35%, 100% 70%, 100% 98%, 52% 99%, 0 100%, 0% 70%, 0% 35%, 0 0);
+      // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      transform-origin: bottom;
+      // animation-name: intro-in;
+      // animation-duration: 0.15s;
+      // animation-delay: 0.5s;
+      // animation-fill-mode: both;
+      // animation-timing-function: ease-in;
+      // animation-direction: normal;
+      opacity: 0;
+    }
+
+    .intro2__wrap {
+      opacity: 0;
+      position: absolute;
+      margin: auto;
+      bottom: -33px;
+      left: 0;
+      right: 0;
+      filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.5));
+      z-index: 3;
+      width: 84px;
+      height: 534px;
+      transform: rotate(-20deg);
+
+    .intro2 {
+      position: absolute;
+      margin: auto;
+      width: inherit;
+      height: inherit;
+      top: inherit;
+      left: inherit;
+      right: inherit;
+      background-color: #ff0d19;
+      clip-path: polygon(0 0, 100% 5.9%, 100% 100%, 0 92%);
+      transform-origin: top;
+      // animation-name: intro-in, intro-reverse;
+      // animation-duration: 0.15s, 0.15s;
+      // animation-delay: 0.65s, 2.35s;
+      // animation-fill-mode: both, forwards;
+      // animation-timing-function: linear, linear;
+      // animation-direction: normal;
+      opacity: 0;
+      }
+    }
+ 
+
+    .intro3 {
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      background-color: $logo-dark-red;
+      width: 86.5px;
+      height: 472px;
+      clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 99%, 0 98%, 0% 70%, 0% 35%, 0 0);
+      // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      transform-origin: bottom;
+      // animation-name: intro-in, intro-reverse;
+      // animation-duration: 0.15s, 0.15s;
+      // animation-delay: 0.8s, 2.2s;
+      // animation-fill-mode: both, forwards;
+      // animation-timing-function: ease-out, ease-in;
+      // animation-direction: normal;
+    }
+  }
+}
+
+
+@keyframes intro-in {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+     transform: scaleY(1);
+  }
+}
+
+
+@keyframes intro-reverse {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+     transform: scaleY(0);
+  }
+}
+
+@keyframes introScaleUp {
+  to {
+     transform: scale(5) translateX(200px);
+  }
+}
