@@ -41,6 +41,7 @@ body {
       height: 472px;
       // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       z-index: 1;
+      animation: random-position 5s infinite ease;
     }
 
     .intro1 {
@@ -51,13 +52,13 @@ body {
       clip-path: polygon(50% 0, 100% 0, 100% 35%, 100% 70%, 100% 98%, 52% 99%, 0 100%, 0% 70%, 0% 35%, 0 0);
       // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       z-index: 1;
-      transform-origin: bottom;
-      animation-name: intro-in;
-      animation-duration: 0.15s;
-      animation-delay: 0.5s;
-      animation-fill-mode: both;
-      animation-timing-function: ease-in;
-      animation-direction: normal;
+      // transform-origin: bottom;
+      // animation-name: intro-in;
+      // animation-duration: 0.15s;
+      // animation-delay: 0.5s;
+      // animation-fill-mode: both;
+      // animation-timing-function: ease-in;
+      // animation-direction: normal;
       opacity: 0;
     }
 
@@ -84,13 +85,13 @@ body {
       right: inherit;
       background-color: #ff0d19;
       clip-path: polygon(0 0, 100% 5.9%, 100% 100%, 0 92%);
-      transform-origin: top;
-      animation-name: intro-in, intro-reverse;
-      animation-duration: 0.15s, 0.15s;
-      animation-delay: 0.65s, 2.35s;
-      animation-fill-mode: both, forwards;
-      animation-timing-function: linear, linear;
-      animation-direction: normal;
+      // transform-origin: top;
+      // animation-name: intro-in, intro-reverse;
+      // animation-duration: 0.15s, 0.15s;
+      // animation-delay: 0.65s, 2.35s;
+      // animation-fill-mode: both, forwards;
+      // animation-timing-function: linear, linear;
+      // animation-direction: normal;
       opacity: 0;
       }
     }
@@ -105,13 +106,13 @@ body {
       clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 99%, 0 98%, 0% 70%, 0% 35%, 0 0);
       // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       z-index: 1;
-      transform-origin: bottom;
-      animation-name: intro-in, intro-reverse;
-      animation-duration: 0.15s, 0.15s;
-      animation-delay: 0.8s, 2.2s;
-      animation-fill-mode: both, forwards;
-      animation-timing-function: ease-out, ease-in;
-      animation-direction: normal;
+      // transform-origin: bottom;
+      // animation-name: intro-in, intro-reverse;
+      // animation-duration: 0.15s, 0.15s;
+      // animation-delay: 0.8s, 2.2s;
+      // animation-fill-mode: both, forwards;
+      // animation-timing-function: ease-out, ease-in;
+      // animation-direction: normal;
       opacity: 0;
     }
   }
@@ -140,5 +141,102 @@ body {
 @keyframes introScaleUp {
   to {
      transform: scale(5) translateX(200px);
+  }
+}
+
+@keyframes random-position {
+  0% {
+    left: random($limit: 50) + px;
+  }
+
+  2% {
+    left: random($limit: 50) + px;
+  }
+
+  4% {
+    left: random($limit: 50) + px;
+  }
+
+  6% {
+    left: random($limit: 50) + px;
+  }
+
+  8% {
+    left: random($limit: 50) + px;
+  }
+
+  10% {
+    left: random($limit: 50) + px;
+  }
+
+  12% {
+    left: random($limit: 50) + px;
+  }
+
+  14% {
+    left: random($limit: 50) + px;
+  }
+
+  16% {
+    left: random($limit: 50) + px;
+  }
+
+  18% {
+    left: random($limit: 50) + px;
+  }
+
+  20% {
+    left: random($limit: 50) + px;
+  }
+
+  22% {
+    left: random($limit: 50) + px;
+  }
+
+  24% {
+    left: random($limit: 50) + px;
+  }
+
+  26% {
+    left: random($limit: 50) + px;
+  }
+
+  28% {
+    left: random($limit: 50) + px;
+  }
+
+  30% {
+    left: random($limit: 50) + px;
+  }
+
+  32% {
+    left: random($limit: 50) + px;
+  }
+
+  34% {
+    left: random($limit: 50) + px;
+  }
+
+  36% {
+    left: random($limit: 50) + px;
+  }
+
+  38% {
+    left: random($limit: 50) + px;
+  }
+
+
+  40% {
+    left: random($limit: 50) + px;
+  }
+
+
+  42% {
+    left: random($limit: 50) + px;
+  }
+
+
+  100% {
+    left: random($limit: 50) + px;
   }
 }

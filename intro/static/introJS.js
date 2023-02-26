@@ -7,10 +7,11 @@ for (let i = 0; i < 10; i += 1) {
   containerEl.prepend(cloneLine);
 }
 
-const individualLineEl = containerEl.childNodes;
+// const individualLineEl = containerEl.children;
 
-console.log(individualLineEl);
-for (let x = 0; x < 10; x += 1) {
-  textEl.removeChild(textEl);
-  individualLineEl[x].setAttribute("style", `left: ${x * 5}px;`);
-}
+// console.log(individualLineEl);
+
+
+// for (let x = 0; x < 11; x += 1) {
+//   individualLineEl[x].setAttribute("style", `left: ${x * 5}px;`);
+// }

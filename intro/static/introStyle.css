@@ -39,6 +39,7 @@ body {
   width: 1px;
   height: 472px;
   z-index: 1;
+  animation: random-position 5s infinite ease;
 }
 .introlayout .container .intro1 {
   position: absolute;
@@ -48,13 +49,6 @@ body {
   -webkit-clip-path: polygon(50% 0, 100% 0, 100% 35%, 100% 70%, 100% 98%, 52% 99%, 0 100%, 0% 70%, 0% 35%, 0 0);
           clip-path: polygon(50% 0, 100% 0, 100% 35%, 100% 70%, 100% 98%, 52% 99%, 0 100%, 0% 70%, 0% 35%, 0 0);
   z-index: 1;
-  transform-origin: bottom;
-  animation-name: intro-in;
-  animation-duration: 0.15s;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in;
-  animation-direction: normal;
   opacity: 0;
 }
 .introlayout .container .intro2__wrap {
@@ -81,13 +75,6 @@ body {
   background-color: #ff0d19;
   -webkit-clip-path: polygon(0 0, 100% 5.9%, 100% 100%, 0 92%);
           clip-path: polygon(0 0, 100% 5.9%, 100% 100%, 0 92%);
-  transform-origin: top;
-  animation-name: intro-in, intro-reverse;
-  animation-duration: 0.15s, 0.15s;
-  animation-delay: 0.65s, 2.35s;
-  animation-fill-mode: both, forwards;
-  animation-timing-function: linear, linear;
-  animation-direction: normal;
   opacity: 0;
 }
 .introlayout .container .intro3 {
@@ -99,13 +86,6 @@ body {
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 99%, 0 98%, 0% 70%, 0% 35%, 0 0);
           clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 99%, 0 98%, 0% 70%, 0% 35%, 0 0);
   z-index: 1;
-  transform-origin: bottom;
-  animation-name: intro-in, intro-reverse;
-  animation-duration: 0.15s, 0.15s;
-  animation-delay: 0.8s, 2.2s;
-  animation-fill-mode: both, forwards;
-  animation-timing-function: ease-out, ease-in;
-  animation-direction: normal;
   opacity: 0;
 }
 
@@ -128,5 +108,76 @@ body {
 @keyframes introScaleUp {
   to {
     transform: scale(5) translateX(200px);
+  }
+}
+@keyframes random-position {
+  0% {
+    left: 12px;
+  }
+  2% {
+    left: 2px;
+  }
+  4% {
+    left: 24px;
+  }
+  6% {
+    left: 7px;
+  }
+  8% {
+    left: 22px;
+  }
+  10% {
+    left: 34px;
+  }
+  12% {
+    left: 13px;
+  }
+  14% {
+    left: 26px;
+  }
+  16% {
+    left: 25px;
+  }
+  18% {
+    left: 8px;
+  }
+  20% {
+    left: 37px;
+  }
+  22% {
+    left: 43px;
+  }
+  24% {
+    left: 16px;
+  }
+  26% {
+    left: 32px;
+  }
+  28% {
+    left: 47px;
+  }
+  30% {
+    left: 46px;
+  }
+  32% {
+    left: 10px;
+  }
+  34% {
+    left: 28px;
+  }
+  36% {
+    left: 48px;
+  }
+  38% {
+    left: 1px;
+  }
+  40% {
+    left: 47px;
+  }
+  42% {
+    left: 23px;
+  }
+  100% {
+    left: 18px;
   }
 }/*# sourceMappingURL=introStyle.css.map */
