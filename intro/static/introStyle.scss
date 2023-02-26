@@ -17,6 +17,43 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: black;
+
+  .btn-secondary {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    background-color: #000000;
+    border-color: $light-gray;
+    color: $light-gray;
+    padding: 5px 0px;
+    font-size: 20px;
+    width: 100px;
+    border-radius: 3px !important;
+    transition: 0.1s !important;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #2d2d2d !important;
+    }
+
+    &:active {
+      color: $light-gray;
+    }
+
+  }
+  
+  .intro-logo {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    opacity: 0;
+    animation: fade-in 1.5s 5.5s forwards ease;
+  }
   
   //로고 제작
   .container {
@@ -27,39 +64,58 @@ body {
     bottom: 0;
     width: 260px;
     height: 470px;
-    transform: scale(3);
+    transform-origin: 50px;
+    transform: scale(0.5);
     margin: auto;
     overflow: hidden;
     // background-color: $light-gray;
-    // animation: introScaleUp 3s 1.5s both ease-in;
-    // transform-origin: center;
+    animation-name: introScaleUp, fade-out;
+    animation-duration: 6.5s, 2s;
+    animation-delay: 1.5s, 5.5s;
+    animation-fill-mode: both, forwards;
+    animation-timing-function: ease-in, ease;
+
+    .fa-music{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    font-size: 40px;
+    color: white;
+    scale: (0.3);
+    animation: music 2s 4s both ease;
+    z-index: 4;
+  }
+
+  .material-symbols-outlined {
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    font-size: 50px;
+    color: white;
+    scale: (0.3);
+    animation: music 2s 3.5s both ease;
+    z-index: 4;
+  }
     
     .lineEffect{
-      position: absolute !important;
-      background-color: rgb(222, 222, 222) !important;
-      width: 1px !important;
-      height: 472px !important;
-      // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      z-index: 1 !important;
-      animation: random-position 3s both infinite linear !important;
+      position: absolute;
+      background-color: rgb(222, 222, 222);
+      width: 1px;
+      height: 472px;
+      transition: 1s;
+      z-index: 1;
+      opacity: 0;
     }
 
     .intro1 {
-      position: absolute;
-      background-color: $logo-dark-red;
       width: 86.5px;
       height: 472px;
+      position: absolute;
+      background-color: $logo-dark-red;
       clip-path: polygon(50% 0, 100% 0, 100% 35%, 100% 70%, 100% 98%, 52% 99%, 0 100%, 0% 70%, 0% 35%, 0 0);
-      // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       z-index: 1;
-      // transform-origin: bottom;
-      // animation-name: intro-in;
-      // animation-duration: 0.15s;
-      // animation-delay: 0.5s;
-      // animation-fill-mode: both;
-      // animation-timing-function: ease-in;
-      // animation-direction: normal;
-      opacity: 0;
+      transform-origin: bottom;
+      left: 0;
     }
 
     .intro2__wrap {
@@ -73,7 +129,7 @@ body {
       width: 84px;
       height: 534px;
       transform: rotate(-20deg);
-      opacity: 0;
+      opacity: 1;
 
     .intro2 {
       position: absolute;
@@ -85,14 +141,7 @@ body {
       right: inherit;
       background-color: #ff0d19;
       clip-path: polygon(0 0, 100% 5.9%, 100% 100%, 0 92%);
-      // transform-origin: top;
-      // animation-name: intro-in, intro-reverse;
-      // animation-duration: 0.15s, 0.15s;
-      // animation-delay: 0.65s, 2.35s;
-      // animation-fill-mode: both, forwards;
-      // animation-timing-function: linear, linear;
-      // animation-direction: normal;
-      opacity: 0;
+      transform-origin: top;
       }
     }
  
@@ -104,16 +153,8 @@ body {
       width: 86.5px;
       height: 472px;
       clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 99%, 0 98%, 0% 70%, 0% 35%, 0 0);
-      // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       z-index: 1;
-      // transform-origin: bottom;
-      // animation-name: intro-in, intro-reverse;
-      // animation-duration: 0.15s, 0.15s;
-      // animation-delay: 0.8s, 2.2s;
-      // animation-fill-mode: both, forwards;
-      // animation-timing-function: ease-out, ease-in;
-      // animation-direction: normal;
-      opacity: 0;
+      transform-origin: bottom;
     }
   }
 }
@@ -139,53 +180,92 @@ body {
 }
 
 @keyframes introScaleUp {
-  to {
-     transform: scale(5) translateX(200px);
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+     transform: scale(25);
   }
 }
 
-@keyframes random-position {
+@for $i from 0 to 11 {
+  @keyframes random-position#{$i} {
+    0% {
+      left: random($limit: 100) + px;
+    }
+  
+    10% {
+      left: random($limit: 100) + px;
+    }
+  
+    20% {
+      left: random($limit: 100) + px;
+    }
+  
+    30% {
+      left: random($limit: 50) + px;
+    }
+  
+    40% {
+      left: random($limit: 100) + px;
+    }
+  
+    50% {
+      left: random($limit: 100) + px;
+    }
+  
+    60% {
+      left: random($limit: 100) + px;
+    }
+  
+    70% {
+      left: random($limit: 100) + px;
+    }
+  
+    80% {
+      left: random($limit: 100) + px;
+    }
+  
+    90% {
+      left: random($limit: 100) + px;
+    }
+  
+    100% {
+      left: random($limit: 100) + px;
+    }
+  }
+
+}
+
+@keyframes fade-out {
   0% {
-    left: 0px;
-  }
-
-  10% {
-    left: random($limit: 50) + px;
-  }
-
-  20% {
-    left: random($limit: 50) + px;
-  }
-
-  30% {
-    left: random($limit: 50) + px;
-  }
-
-  40% {
-    left: random($limit: 50) + px;
-  }
-
-  50% {
-    left: random($limit: 50) + px;
-  }
-
-  60% {
-    left: random($limit: 50) + px;
-  }
-
-  70% {
-    left: random($limit: 50) + px;
-  }
-
-  80% {
-    left: random($limit: 50) + px;
-  }
-
-  90% {
-    left: random($limit: 50) + px;
-  }
-
+    opacity: 1;
+  }  
   100% {
-    left: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }  
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes music {
+  0% {
+    transform: scale(0.3) rotate(10deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: scale(2) rotate(10deg);
+    opacity: 0;
   }
 }
