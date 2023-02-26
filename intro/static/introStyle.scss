@@ -34,14 +34,14 @@ body {
     // animation: introScaleUp 3s 1.5s both ease-in;
     // transform-origin: center;
     
-    .lineEffect {
-      position: absolute;
-      background-color: rgb(222, 222, 222);
-      width: 1px;
-      height: 472px;
+    .lineEffect{
+      position: absolute !important;
+      background-color: rgb(222, 222, 222) !important;
+      width: 1px !important;
+      height: 472px !important;
       // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-      animation: random-position 5s infinite ease;
+      z-index: 1 !important;
+      animation: random-position 3s both infinite linear !important;
     }
 
     .intro1 {
@@ -146,42 +146,10 @@ body {
 
 @keyframes random-position {
   0% {
-    left: random($limit: 50) + px;
-  }
-
-  2% {
-    left: random($limit: 50) + px;
-  }
-
-  4% {
-    left: random($limit: 50) + px;
-  }
-
-  6% {
-    left: random($limit: 50) + px;
-  }
-
-  8% {
-    left: random($limit: 50) + px;
+    left: 0px;
   }
 
   10% {
-    left: random($limit: 50) + px;
-  }
-
-  12% {
-    left: random($limit: 50) + px;
-  }
-
-  14% {
-    left: random($limit: 50) + px;
-  }
-
-  16% {
-    left: random($limit: 50) + px;
-  }
-
-  18% {
     left: random($limit: 50) + px;
   }
 
@@ -189,54 +157,35 @@ body {
     left: random($limit: 50) + px;
   }
 
-  22% {
-    left: random($limit: 50) + px;
-  }
-
-  24% {
-    left: random($limit: 50) + px;
-  }
-
-  26% {
-    left: random($limit: 50) + px;
-  }
-
-  28% {
-    left: random($limit: 50) + px;
-  }
-
   30% {
     left: random($limit: 50) + px;
   }
-
-  32% {
-    left: random($limit: 50) + px;
-  }
-
-  34% {
-    left: random($limit: 50) + px;
-  }
-
-  36% {
-    left: random($limit: 50) + px;
-  }
-
-  38% {
-    left: random($limit: 50) + px;
-  }
-
 
   40% {
     left: random($limit: 50) + px;
   }
 
-
-  42% {
+  50% {
     left: random($limit: 50) + px;
   }
 
+  60% {
+    left: random($limit: 50) + px;
+  }
+
+  70% {
+    left: random($limit: 50) + px;
+  }
+
+  80% {
+    left: random($limit: 50) + px;
+  }
+
+  90% {
+    left: random($limit: 50) + px;
+  }
 
   100% {
-    left: random($limit: 50) + px;
+    left: 0px;
   }
 }

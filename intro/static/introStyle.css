@@ -34,12 +34,12 @@ body {
   overflow: hidden;
 }
 .introlayout .container .lineEffect {
-  position: absolute;
-  background-color: rgb(222, 222, 222);
-  width: 1px;
-  height: 472px;
-  z-index: 1;
-  animation: random-position 5s infinite ease;
+  position: absolute !important;
+  background-color: rgb(222, 222, 222) !important;
+  width: 1px !important;
+  height: 472px !important;
+  z-index: 1 !important;
+  animation: random-position 3s both infinite linear !important;
 }
 .introlayout .container .intro1 {
   position: absolute;
@@ -112,72 +112,36 @@ body {
 }
 @keyframes random-position {
   0% {
-    left: 12px;
-  }
-  2% {
-    left: 2px;
-  }
-  4% {
-    left: 24px;
-  }
-  6% {
-    left: 7px;
-  }
-  8% {
-    left: 22px;
+    left: 0px;
   }
   10% {
-    left: 34px;
-  }
-  12% {
-    left: 13px;
-  }
-  14% {
-    left: 26px;
-  }
-  16% {
-    left: 25px;
-  }
-  18% {
-    left: 8px;
+    left: 30px;
   }
   20% {
-    left: 37px;
-  }
-  22% {
-    left: 43px;
-  }
-  24% {
-    left: 16px;
-  }
-  26% {
     left: 32px;
   }
-  28% {
-    left: 47px;
-  }
   30% {
-    left: 46px;
-  }
-  32% {
-    left: 10px;
-  }
-  34% {
-    left: 28px;
-  }
-  36% {
-    left: 48px;
-  }
-  38% {
-    left: 1px;
+    left: 36px;
   }
   40% {
-    left: 47px;
+    left: 49px;
   }
-  42% {
-    left: 23px;
+  50% {
+    left: 13px;
+  }
+  60% {
+    left: 28px;
+  }
+  70% {
+    left: 30px;
+  }
+  80% {
+    left: 37px;
+  }
+  90% {
+    left: 15px;
   }
   100% {
-    left: 18px;
+    left: 0px;
   }
 }/*# sourceMappingURL=introStyle.css.map */
