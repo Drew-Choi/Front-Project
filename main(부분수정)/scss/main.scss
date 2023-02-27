@@ -63,7 +63,7 @@ body {
               transition-delay: 0.3s;
               transform-origin: center;
               cursor: pointer;
-              z-index: 5;
+              z-index: 1;
 
               &.on {
                 transform: scale(1.5);
@@ -76,12 +76,21 @@ body {
           }
         }
         
+        //버튼은 계속 복사해서 써야함
         .swiper-button-prev,
         .swiper-button-next {
           top: 250px;
           color: white;
           opacity: 0.8;
         }
+
+        .swiper-button-prev.a, 
+        .swiper-button-next.a {
+          top: 600px;
+          color: white;
+          opacity: 0.8;
+        }
+        
       }
     }
   }

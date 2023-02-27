@@ -142,7 +142,7 @@ body {
   transition-delay: 0.3s;
   transform-origin: center;
   cursor: pointer;
-  z-index: 5;
+  z-index: 1;
 }
 .inner .section2 .sub .sub__detail .swiper-zone .albums .swiper-wrapper .swiper-slide .album-box.on {
   transform: scale(1.5);
@@ -151,6 +151,12 @@ body {
 .inner .section2 .sub .sub__detail .swiper-button-prev,
 .inner .section2 .sub .sub__detail .swiper-button-next {
   top: 250px;
+  color: white;
+  opacity: 0.8;
+}
+.inner .section2 .sub .sub__detail .swiper-button-prev.a,
+.inner .section2 .sub .sub__detail .swiper-button-next.a {
+  top: 600px;
   color: white;
   opacity: 0.8;
 }/*# sourceMappingURL=main.css.map */
