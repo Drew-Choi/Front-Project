@@ -1,22 +1,25 @@
 @import "reset";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 //font-family: 'Noto Sans KR', sans-serif;
 
-$maind-red:#e50a15;
-$dark-red:#dc060f;
-$logo-dark-red:#b20710;
-$white:#ffffff;
-$gray:#303030;
-$light-gray:#3c3c3c;
+$maind-red: #e50a15;
+$dark-red: #dc060f;
+$logo-dark-red: #b20710;
+$white: #ffffff;
+$gray: #303030;
+$light-gray: #3c3c3c;
 $black: #000000;
 $black2: #121212;
 
 //COMMON
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   color: $white;
 }
 
+input {
+  all: unset;
+}
 
 //INDIVIDUAL
 header {
@@ -26,6 +29,7 @@ header {
   display: flex;
   background-color: $black;
   padding: 10px 20px;
+  z-index: 999;
 
   .header__logo {
     display: inline-block;
@@ -34,52 +38,107 @@ header {
     transform: translateY(-50%);
     width: 300px;
     margin-left: 10px;
-   }
-   img {
+  }
+  img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 35%;
-   }
   }
+}
 
+.menus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 150px;
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  margin-left: 20px;
 
-  .menus {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 150px;
-    display: flex;
-    width: 200px;
-    justify-content: space-around;
-    margin-left: 20px;
-
-   a{
+  a {
     color: $white;
     font-size: 15px;
-   }
+  }
+}
+
+.ex-menu {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 300px;
+  height: 30px;
+
+  .search {
+    position: absolute;
+    top: 50%;
+    right: 120px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 25px;
+    z-index: 1;
+    margin-right: 20px;
+    transition: 0.5s;
+    transform-origin: right;
+    transition-timing-function: ease;
+    z-index: 1;
+    color: $white;
+    font-size: 15px;
+    text-indent: 2rem;
+    // border: 1px solid $white;
+
+    &::placeholder {
+      font-size: 12px;
+      text-align: left;
+    }
+
+    &.on {
+      width: 160px;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      border: 1px solid $white;
+    }
   }
 
-  .ex-menu {
-    display: flex;
-    justify-content: space-around;
+  .search__icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px;
-    width: 150px;
-    
-    a{
-      color: $white;
-    }
+    left: 160px;
+    transition: 0.5s;
+    transform-origin: right;
+    transition-timing-function: ease;
+    z-index: 3;
 
-    .login {
-      width: 30px;
-      height: 30px;
-
-      border-radius: 5px;
-      background-image: url("/img/default-login.png");
-      background-size: cover;
-      background-position: center;
+    &.on {
+      left: 6px;
     }
   }
+  
+  .pop-up {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 78px;
+  }
+
+  a {
+    color: $white;
+  }
+
+  .login {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    border-radius: 5px;
+    background-image: url("../img/netflix_logo/nav_logo/netflixMusic_default-login.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
