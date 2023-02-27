@@ -75,27 +75,28 @@ body {
     animation-fill-mode: both, forwards;
     animation-timing-function: ease-in, ease;
 
-    .fa-music{
+    .fa-music {
     position: absolute;
-    top: 200px;
-    left: 20px;
-    font-size: 40px;
+    top: 210px;
+    left: 30px;
+    font-size: 20px;
     color: white;
-    scale: (0.3);
+    scale: (0.2);
     animation: music 2s 4s both ease;
     z-index: 4;
-  }
+    }
 
-  .material-symbols-outlined {
+    .material-symbols-outlined{
     position: absolute;
-    top: 250px;
+    top: 220px;
     left: 40px;
-    font-size: 50px;
+    font-size: 40px;
+    font-weight:100;
     color: white;
     scale: (0.3);
     animation: music 2s 3.5s both ease;
     z-index: 4;
-  }
+    }
     
     .lineEffect{
       position: absolute;
